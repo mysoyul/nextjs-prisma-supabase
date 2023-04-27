@@ -1,4 +1,4 @@
-import prisma from "../prisma/client";
+import prisma from "@/prisma/client";
 import Posts from "./Posts";
 
 export default async function Home() {
@@ -6,6 +6,7 @@ export default async function Home() {
     include: {
       author: true,
     },
+    
   });
 
   return <Posts posts={posts} />;
